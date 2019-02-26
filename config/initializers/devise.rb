@@ -10,7 +10,6 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '0ca6693661aace378660744b6e12a08fab4fcc926f98b9b8581251d44b3c3f742671bc0ca89986023b85bc541537f018de6db22058935b8ff4cf21a823dcfc11'
   config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"],
-                  scope: 'email,user_likes',
                   client_options: {
                       site: 'https://graph.facebook.com/v3.2',
                       authorize_url: "https://www.facebook.com/v3.2/dialog/oauth"},
