@@ -6,7 +6,7 @@ ruby '2.6.0'
 gem 'devise', '~> 4.6', '>= 4.6.1'
 gem 'omniauth-facebook', '~> 5.0'
 gem 'koala', '~> 3.0'
-
+gem 'mechanize', '~> 2.7', '>= 2.7.6'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
