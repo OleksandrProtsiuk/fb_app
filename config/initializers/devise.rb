@@ -12,8 +12,7 @@ Devise.setup do |config|
   config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"],
                   client_options: {
                       site: 'https://graph.facebook.com/v3.2',
-                      authorize_url: "https://www.facebook.com/v3.2/dialog/oauth"},
-                  callback_url: ENV["CALLBACK_URL"]
+                      authorize_url: "https://www.facebook.com/v3.2/dialog/oauth"}
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'
