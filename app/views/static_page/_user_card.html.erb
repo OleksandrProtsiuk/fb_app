@@ -1,20 +1,25 @@
 
 <div class="row">
   <div class="col-xs-6 col-xs-offset-3">
-    <div class="row UserCard">
+    <div class="row">
       <div class="col-xs-10">
-        <span class="UserCard-name">
-          <%= current_user[:name] %>
-        </span>
-        <span class="UserCard-email">
-          <%= current_user[:email] %>
-        </span>
+        <p class="UserCard-name">
+          Username: <%= current_user[:name] %>
+        </p>
+        <p class="UserCard-email">
+          Email: <%= current_user[:email] %>
+        </p>
+        <p class="UserCard-email">
+          Id: <%= current_user[:id] %>
+        </p>
+        <hr>
         <span class="UserCard-logout">
-          <%= link_to "Logout", destroy_user_session_url, method: :delete %>
+          <%= link_to "Logout", destroy_user_session_url, method: :delete, class: 'btn btn-sm btn-fb' %>
         </span>
       </div>
     </div>
     <div class="row">
+          <hr>
           <%= friends %>
     </div>
   </div>
