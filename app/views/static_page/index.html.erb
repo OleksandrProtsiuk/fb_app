@@ -1,7 +1,19 @@
 
 <div class="container">
-  <div>
+  <div align="center">
 
+    <% unless current_user %>
+      <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path, class: 'btn btn-lg btn-fb' %>
+    <% else %>
+      <%= current_user[:name] %>
+      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+      <div align="right">
+        <%= link_to 'about', about_url %>
+      </div>
+
+      <%= render 'static_page/user_card' %>
+
+    <% end %>
   </div>
-  <p>index</p>
+  <hr>
 </div>
