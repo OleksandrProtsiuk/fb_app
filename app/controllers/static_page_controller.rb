@@ -10,12 +10,12 @@ class StaticPageController < ApplicationController
   end
 
   def home
-    if current_user
-      @graph = Koala::Facebook::API.new(access_token)
-      @friends = @graph.get_connections("me", "friends")
-    else
-      @friends = 'Ups !.. U forgot to log in...'
-    end
+    #if current_user
+     # @graph = Koala::Facebook::API.new(access_token)
+      #@friends = @graph.get_connections("me", "friends")
+    #else
+     # @friends = 'Ups !.. U forgot to log in...'
+    #end
   end
 
   def about
