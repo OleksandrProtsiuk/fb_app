@@ -3,13 +3,19 @@ class StaticPageController < ApplicationController
 
   def index
     if current_user
-      redirect home_url
+      redirect_to home_url
     else
       'ok'
     end
   end
 
   def home
+    if current_user
+      @graph = Koala::Facebook::API.new(access_token)
+      @friends = @graph.get_connections("me", "friends")
+    else
+      @friends = 'Ups !.. U forgot to log in...'
+    end
   end
 
   def about
