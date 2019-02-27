@@ -3,7 +3,7 @@ class StaticPageController < ApplicationController
 
   def index
     if current_user
-      redirect_to home_url
+      redirect_to home_path
     else
       'ok'
     end
