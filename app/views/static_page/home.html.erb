@@ -1,1 +1,25 @@
 home
+
+<% if current_user %>
+<p>
+  Username: <%= current_user[:name] %>
+</p>
+
+  <% send_message.each do |element|  %>
+    <div style="background: skyblue">
+      <hr>
+      <% if element.class == Array %>
+        <% element.each do |e| %>
+          <%= e %>
+          <br>
+        <% end %>
+      <% else %>
+        <%= element %>
+      <% end %>
+      <hr>
+    </div>
+  <% end %>
+
+  <% else %>
+  <h3 style="color: red">AUTH BEFORE</h3>
+ <% end %>
